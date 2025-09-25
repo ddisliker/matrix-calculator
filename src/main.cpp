@@ -39,6 +39,10 @@ int main() {
         // Тестируем индивидуальное задание - сумму элементов
         double total_sum = matrix_sum(A);
         std::cout << "\nSum of all elements in matrix A: " << total_sum << std::endl;
+        // Тестируем поиск максимума
+        double max_val = matrix_max(A);
+        std::cout << "\nMax element in matrix A: " << max_val << std::endl;
+
 
         // Освобождаем память (КАЖДУЮ МАТРИЦУ ТОЛЬКО ОДИН РАЗ!)
         free_matrix(A);

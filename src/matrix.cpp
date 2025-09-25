@@ -121,3 +121,19 @@ double matrix_sum(Matrix m) {
     }
     return sum;
 }
+// Поиск максимального элемента в матрице
+double matrix_max(Matrix m) {
+    if (m.data == nullptr || m.rows <= 0 || m.cols <= 0) {
+        return 0.0;
+    }
+
+    double max_val = m.data[0][0];
+    for (int i = 0; i < m.rows; i++) {
+        for (int j = 0; j < m.cols; j++) {
+            if (m.data[i][j] > max_val) {
+                max_val = m.data[i][j];
+            }
+        }
+    }
+    return max_val;
+}
